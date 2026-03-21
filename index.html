@@ -447,33 +447,32 @@ html { overflow-x: hidden; }
   .timeline { width: 100% !important; }
 
   .timeline::before {
-    left: 11px !important;
-    transform: none !important;
-    width: 2px !important;
-  }
-
-  .tl-item {
-    display: grid !important;
-    grid-template-columns: 26px 1fr !important;
-    grid-template-rows: auto !important;
-    gap: 0 12px !important;
-    margin-bottom: 22px !important;
-    align-items: start !important;
-  }
-
-  /* Always hide the empty spacer column */
-  .tl-empty { display: none !important; }
-
-  /* Dot → column 1 always */
-  .tl-center {
-  grid-column: 1 !important;
-  grid-row: 1 !important;
-  padding-top: 18px !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
+  display: none !important;
 }
 
+.tl-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin-bottom: 22px !important;
+  position: relative !important;
+}
+
+  /* Always hide the empty spacer column */
+.tl-empty { display: none !important; }
+
+.tl-center {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-bottom: 12px !important;
+  padding-top: 0 !important;
+}
+
+.tl-card {
+  width: 100% !important;
+  min-width: 0 !important;
+}
   /* Card → column 2 always (covers both left & right desktop items) */
   .tl-card {
     grid-column: 2 !important;
