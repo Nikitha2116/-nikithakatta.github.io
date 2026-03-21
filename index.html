@@ -439,10 +439,14 @@ html { overflow-x: hidden; }
     flex-wrap: wrap !important;
     gap: 10px !important;
   }
-  /* --- TIMELINE --- */
+ /* --- TIMELINE --- */
 .timeline { width: 100% !important; }
 
-.timeline::before { display: none !important; }
+.timeline::before {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 2px !important;
+}
 
 .tl-item {
   display: flex !important;
