@@ -439,36 +439,58 @@ html { overflow-x: hidden; }
     flex-wrap: wrap !important;
     gap: 10px !important;
   }
-/* --- TIMELINE --- */
-.timeline { width: 100% !important; position: relative !important; }
+/* --- TIMELINE (MOBILE FIXED WITH LINE + DOT) --- */
 
+.timeline {
+  position: relative !important;
+  width: 100% !important;
+  padding-left: 30px !important; /* space for line */
+}
+
+/* LEFT VERTICAL LINE */
 .timeline::before {
-  left: 16px !important;
-  transform: none !important;
-  width: 2px !important;
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #e040fb, #7c3aed, #00bcd4);
 }
 
+/* EACH ITEM */
 .tl-item {
-  display: grid !important;
-  grid-template-columns: 32px 1fr !important;
-  gap: 0 14px !important;
-  margin-bottom: 22px !important;
-  align-items: start !important;
-}
-
-.tl-empty { display: none !important; }
-
-.tl-center {
+  position: relative;
   display: flex !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  padding-top: 20px !important;
-  width: 32px !important;
+  flex-direction: column !important;
+  gap: 14px !important;
+  margin-bottom: 28px !important;
 }
 
+/* DOT */
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e040fb, #7c3aed);
+  box-shadow: 0 0 0 4px rgba(224,64,251,0.2);
+}
+
+/* REMOVE OLD CENTER COLUMN */
+.tl-center,
+.tl-empty {
+  display: none !important;
+}
+
+/* CARD FULL WIDTH */
 .tl-card {
   width: 100% !important;
   min-width: 0 !important;
+  padding: 16px !important;
 }
   /* --- EDUCATION --- */
   .edu-grid {
