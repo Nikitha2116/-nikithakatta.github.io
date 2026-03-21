@@ -439,26 +439,18 @@ html { overflow-x: hidden; }
     flex-wrap: wrap !important;
     gap: 10px !important;
   }
+  /* --- TIMELINE --- */
+.timeline { width: 100% !important; }
 
-  /* --- TIMELINE ---
-     Desktop: 3 cols [card | dot | card]
-     Mobile:  2 cols [dot | card], line on left
-  */
-  .timeline { width: 100% !important; }
-
-  .timeline::before {
-  display: none !important;
-}
+.timeline::before { display: none !important; }
 
 .tl-item {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   margin-bottom: 22px !important;
-  position: relative !important;
 }
 
-  /* Always hide the empty spacer column */
 .tl-empty { display: none !important; }
 
 .tl-center {
@@ -473,14 +465,6 @@ html { overflow-x: hidden; }
   width: 100% !important;
   min-width: 0 !important;
 }
-  /* Card → column 2 always (covers both left & right desktop items) */
-  .tl-card {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    width: 100% !important;
-    min-width: 0 !important;
-  }
-
   /* --- EDUCATION --- */
   .edu-grid {
     grid-template-columns: 1fr !important;
