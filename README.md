@@ -1,8 +1,6 @@
 # Nikitha Katta — Portfolio
 
-🌐 **Live site:** [nikithakatta.github.io](https://nikithakatta.github.io)
-
-MS in Computer & Information Sciences @ University of Delaware  
+🌐MS in Computer & Information Sciences @ University of Delaware  
 Data Analyst | Python · SQL · Power BI · Tableau · AWS
 
 ---
